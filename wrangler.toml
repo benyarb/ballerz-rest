@@ -1,11 +1,13 @@
-name = "ballerz-rest"
+name = "ballerz-api"
 main = "src/index.ts"
-compatibility_date = "2024-12-04"
+compatibility_date = "2026-10-01"
+workers_dev = false
+routes = [{ pattern = "ballerz.cloud/baller/*", zone_name = "ballerz.cloud" }]
 
 [[kv_namespaces]]
-binding = "BALLER" # Matches the script's KVNamespace
+binding = "BALLER"
 id = "ec2bd233d0b14daaa6fa8b9b9df285b0"
 preview_id = "84a56abe24d84240847cb57cd4e3a2fa"
 
-[observability.logs]
+[observability]
 enabled = true
